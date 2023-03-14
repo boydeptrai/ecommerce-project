@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { urlFor } from '@component/lib/client';
+import { urlFor } from '../lib/client';
 import React from 'react'
 
 const HeroBanner = ({heroBanner}) => {
@@ -12,8 +12,8 @@ const HeroBanner = ({heroBanner}) => {
         <img src={urlFor(heroBanner.image)} alt="Headphones" className="hero-banner-image" />
       </div>
       <div>
-        <Link href={`/product/`} >
-          <button type='button'>BUTTON TEXT</button>
+        <Link href={`/product/${heroBanner.product}`} >
+          <button type='button'>{heroBanner.buttonText}</button>
         </Link>
       </div>
       <div className="desc">
